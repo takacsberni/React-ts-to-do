@@ -1,8 +1,12 @@
-import React, {FC} from 'react';
+import React, {FC, useState} from 'react';
 import './App.css';
 
 const App: FC = () => {
-  return (
+    const [task, setTask] = useState<string>("");
+    const [comment, setComment] = useState<string>("");
+    const [todos, setTodos] = useState([]);
+
+    return (
     <div className="App">
       <div className="header">
           <div className="inputContainer">
