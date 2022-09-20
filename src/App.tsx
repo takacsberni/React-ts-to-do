@@ -21,6 +21,8 @@ const App: FC = () => {
     const addNewTask = (): void => {
         const newTask = {taskName: task, comment: comment};
         setTodos([...todos, newTask]);
+        setTask(""); //to delete the text after adding it
+        setComment("");
         console.log(todos)
     }
 
@@ -28,8 +30,8 @@ const App: FC = () => {
     <div className="App">
       <div className="header">
           <div className="inputContainer">
-              <input placeholder="Task" type="text" onChange={handleInputChange} name="task"/>
-              <input placeholder="Comment " type="text" onChange={handleInputChange} name="comment" />
+              <input placeholder="Task" type="text" onChange={handleInputChange} name="task" value={task}/>
+              <input placeholder="Comment " type="text" onChange={handleInputChange} name="comment" value={comment} />
           </div>
           <button onClick={addNewTask}> Add a new task </button>
       </div>
