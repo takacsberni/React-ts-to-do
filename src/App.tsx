@@ -27,6 +27,10 @@ const App: FC = () => {
         console.log(todos)
     }
 
+    const deleteTask = (taskToDelete: string): void => {
+
+    }
+
     return (
     <div className="App">
       <div className="header">
