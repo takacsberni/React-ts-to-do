@@ -6,6 +6,16 @@ type Props = {
 };
 
 const TaskCard = ({task}: Props) => {
-   return <div> {task.taskName} </div>;
+   return (
+       <div className="task">
+           <div className="task-content">
+               <span> {task.taskName}</span>
+               <span> {task.comment} </span>
+           </div>
+           <button className="card-button"> delete </button>
+       </div>
+
+
+   );
 };
 export default TaskCard;
