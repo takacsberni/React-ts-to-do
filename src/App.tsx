@@ -1,8 +1,7 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {FC} from 'react';
 import './App.css';
 
-function App() {
+const App: FC = () => {
   return (
     <div className="App">
 
