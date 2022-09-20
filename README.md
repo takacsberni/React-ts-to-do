@@ -1,5 +1,6 @@
-# A very basic app to practice TypeScript in React. You can add and delete to do tasks. 
+# React - TypeScript to-do application
 
+A very basic app to practice TypeScript in React. You can add and delete to do tasks. 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
