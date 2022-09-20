@@ -38,7 +38,7 @@ const App: FC = () => {
       </div>
       <div className="todos">
           {todos.map( (task:TaskType)=>{
-              return <TaskCard task={task}/>;
+              return <TaskCard task={task} key={task.taskName}/>;
           } )}
       </div>
 

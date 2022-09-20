@@ -6,6 +6,6 @@ type Props = {
 };
 
 const TaskCard = ({task}: Props) => {
-   return <div key={task.taskName}> {task.taskName} </div>;
+   return <div> {task.taskName} </div>;
 };
 export default TaskCard;
