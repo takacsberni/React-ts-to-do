@@ -1,10 +1,11 @@
 import React, {FC, useState, ChangeEvent} from 'react';
 import './App.css';
+import {TaskType} from "./types/TaskType";
 
 const App: FC = () => {
     const [task, setTask] = useState<string>("");
     const [comment, setComment] = useState<string>("");
-    const [todos, setTodos] = useState([]);
+    const [todos, setTodos] = useState<TaskType[]>([]);
 
     const handleInputChange = (event: ChangeEvent<HTMLInputElement>): void => {
         switch (event.target.name){
@@ -17,6 +18,12 @@ const App: FC = () => {
         }
     }
 
+    const addNewTask = (): void => {
+        const newTask = {taskName: task, comment: comment};
+        setTodos([...todos, newTask]);
+        console.log(todos)
+    }
+
     return (
     <div className="App">
       <div className="header">
@@ -24,7 +31,7 @@ const App: FC = () => {
               <input placeholder="Task" type="text" onChange={handleInputChange} name="task"/>
               <input placeholder="Comment " type="text" onChange={handleInputChange} name="comment" />
           </div>
-          <button> Add a new task </button>
+          <button onClick={addNewTask}> Add a new task </button>
       </div>
       <div className="todos"></div>
 
