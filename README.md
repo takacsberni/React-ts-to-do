@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# A very basic app to practice TypeScript in React. You can add and delete to do tasks. 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
