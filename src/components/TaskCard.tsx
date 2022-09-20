@@ -3,8 +3,9 @@ import {TaskType} from "../types/TaskType";
 
 type Props = {
    task: TaskType;
-}
-
-export const TaskCard = ({task}: Props) => {
-   return <div key={}> something </div>
 };
+
+const TaskCard = ({task}: Props) => {
+   return <div key={task.taskName}> {task.taskName} </div>;
+};
+export default TaskCard;
