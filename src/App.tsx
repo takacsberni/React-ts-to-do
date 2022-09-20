@@ -1,6 +1,7 @@
 import React, {FC, useState, ChangeEvent} from 'react';
 import './App.css';
 import {TaskType} from "./types/TaskType";
+import {TaskCard} from "./components/TaskCard"
 
 const App: FC = () => {
     const [task, setTask] = useState<string>("");
@@ -35,7 +36,11 @@ const App: FC = () => {
           </div>
           <button onClick={addNewTask}> Add a new task </button>
       </div>
-      <div className="todos"></div>
+      <div className="todos">
+          {todos.map( ()=>{
+              return <TaskCard />;
+          } )}
+      </div>
 
     </div>
   );
